@@ -2,7 +2,6 @@ const axios = require("axios");
 
 const API_URL = "http://localhost:5000/api/books";
 
-// Task 10: Get all books – Using async callback function.
 const getAllBooks = async () => {
   try {
     const response = await axios.get(API_URL);
@@ -12,7 +11,6 @@ const getAllBooks = async () => {
   }
 };
 
-// Task 11: Search by ISBN – Using Promises.
 const getBookByISBN = (isbn) => {
   return new Promise((resolve, reject) => {
     axios
@@ -22,7 +20,6 @@ const getBookByISBN = (isbn) => {
   });
 };
 
-// Task 12: Search by Author.
 const getBooksByAuthor = async (author) => {
   try {
     const response = await axios.get(`${API_URL}/author/${author}`);
@@ -32,7 +29,6 @@ const getBooksByAuthor = async (author) => {
   }
 };
 
-// Task 13: Search by Title.
 const getBooksByTitle = async (title) => {
   try {
     const response = await axios.get(`${API_URL}/title/${title}`);
@@ -42,7 +38,6 @@ const getBooksByTitle = async (title) => {
   }
 };
 
-// Test the functions
 (async () => {
   await getAllBooks();
   getBookByISBN("some-isbn").then(console.log).catch(console.error);

@@ -2,7 +2,6 @@ const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-// Task 6: Register New user.
 exports.register = async (req, res) => {
   const { username, password } = req.body;
 
@@ -21,7 +20,6 @@ exports.register = async (req, res) => {
   }
 };
 
-// Task 7: Login as a Registered user.
 exports.login = async (req, res) => {
   const { username, password } = req.body;
 
